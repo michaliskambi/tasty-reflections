@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<level
+  name="tower"
+  scene="level.x3dv"
+  title="Tower"
+  type="Level"
+  placeholders="blender"
+  loading_image="splash.png"
+>
+</level>

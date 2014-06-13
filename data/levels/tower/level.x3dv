@@ -1,0 +1,27 @@
+#X3D V3.0 utf8
+PROFILE Interchange
+
+# Camera settings "encoded" in the VRML/X3D declaration below :
+# direction 0.042545188218355179 0 0.99909442663192749
+# up -1.8597036133272127E-9 1 -4.3671821714497128E-8
+# gravityUp 0 1 0
+Viewpoint {
+  position 35.668220520019531 1.7168045043945313 -107.31514739990234
+  orientation 0 -0.99999994039535522 0 3.0990347862243652
+}
+
+NavigationInfo {
+  type "WALK"
+  avatarSize [ 1 5 1 ]
+  speed 50
+  headlight TRUE
+}
+
+Background {
+  groundColor [ 0.000 0.000 0.000, 0.000 0.932 0.956 ]
+  groundAngle 1.57
+  skyColor [ 0.000 0.000 0.000, 0.000 0.932 0.956 ]
+  skyAngle 1.57
+}
+
+Inline { url "level.x3d" }

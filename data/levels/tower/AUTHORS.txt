@@ -6,3 +6,6 @@ http://opengameart.org/content/dungeon-wall-segments-hi-poly
 http://opengameart.org/content/old-oak-tree
 http://opengameart.org/content/elven-weapon-set
 http://opengameart.org/content/pots-and-pans-pack
+
+Data collected in Michalis Kamburelis' data for teaching Blender
+under http://michalis.ii.uni.wroc.pl/~michalis/ud_blender/sem1/ .

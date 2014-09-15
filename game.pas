@@ -29,7 +29,7 @@ implementation
 
 uses SysUtils,
   CastleLog, CastleWindow, CastleProgress, CastleWindowProgress,
-  CastleResources, CastleCameras;
+  CastleResources, CastleCameras, CastleKeysMouse, CastleFilesUtils;
 
 { routines ------------------------------------------------------------------- }
 
@@ -58,6 +58,12 @@ begin
   (SceneManager.Camera as TWalkCamera).MouseLook := true;
 end;
 
+procedure WindowPress(Container: TUIContainer; const Event: TInputPressRelease);
+begin
+  if Event.IsKey(K_F5) then
+    Window.SaveScreen(FileNameAutoInc(ApplicationName + '_screen_%d.png'));
+end;
+
 function MyGetApplicationName: string;
 begin
   Result := 'tasty_reflections';
@@ -73,5 +79,6 @@ initialization
   { create Window and initialize Window callbacks }
   Window := TCastleWindowTouch.Create(Application);
   Window.OnOpen := @WindowOpen;
+  Window.OnPress := @WindowPress;
   Application.MainWindow := Window;
 end.

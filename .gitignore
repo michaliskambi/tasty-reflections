@@ -2,3 +2,4 @@
 *.ppu
 *.o
 tasty_reflections
+parse-cloud/config/global.json

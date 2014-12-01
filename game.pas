@@ -43,7 +43,9 @@ begin
   Progress.UserInterface := WindowProgressInterface;
 
   Resources.LoadFromFiles; // not used for now
-  Levels.LoadFromFiles;
+  //Levels.LoadFromFiles;
+  // to work on Android, use Levels.AddFromFile, not Levels.LoadFromFiles
+  Levels.AddFromFile(ApplicationData('levels/tower/level.xml'));
 
   SceneManager := Window.SceneManager;
 
@@ -55,7 +57,11 @@ end;
 procedure WindowOpen(Container: TUIContainer);
 begin
   SceneManager.LoadLevel('tower');
+  {$ifdef ANDROID}
+  Window.AutomaticTouchInterface := true;
+  {$else}
   (SceneManager.Camera as TWalkCamera).MouseLook := true;
+  {$endif}
 end;
 
 procedure WindowPress(Container: TUIContainer; const Event: TInputPressRelease);

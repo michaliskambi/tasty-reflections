@@ -1,3 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project name="tasty_reflections" standalone_source="tasty_reflections.lpr">
+<project name="tasty_reflections"
+  standalone_source="tasty_reflections.lpr"
+  android_source="tasty_reflections_android.lpr">
 </project>

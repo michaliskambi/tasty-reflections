@@ -3,3 +3,6 @@
 *.o
 tasty_reflections
 parse-cloud/config/global.json
+AndroidAntProperties.txt
+tasty_reflections-*.apk
+tasty_reflections-src.tar.gz

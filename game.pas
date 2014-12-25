@@ -16,6 +16,10 @@
 { Implements the game logic, independent from Android / standalone. }
 unit Game;
 
+{ $define TOUCH_INTERFACE} // useful to test TOUCH_INTERFACE on desktops
+{$ifdef ANDROID} {$define TOUCH_INTERFACE} {$endif}
+{$ifdef iOS}     {$define TOUCH_INTERFACE} {$endif}
+
 interface
 
 uses CastleWindowTouch, CastleLevels, CastlePlayer;
@@ -57,10 +61,11 @@ end;
 procedure WindowOpen(Container: TUIContainer);
 begin
   SceneManager.LoadLevel('tower');
-  {$ifdef ANDROID}
+  {$ifdef TOUCH_INTERFACE}
   Window.AutomaticTouchInterface := true;
+  Player.EnableCameraDragging := true;
   {$else}
-  (SceneManager.Camera as TWalkCamera).MouseLook := true;
+  Player.Camera.MouseLook := true;
   {$endif}
 end;
 

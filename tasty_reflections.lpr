@@ -25,7 +25,6 @@ begin
   Window.ParseParameters;
 
   Config.Load;
-  Application.Initialize;
   Window.OpenAndRun;
   Config.Save;
 end.

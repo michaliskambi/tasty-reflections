@@ -56,10 +56,7 @@ begin
   Player := TPlayer.Create(SceneManager);
   SceneManager.Items.Add(Player);
   SceneManager.Player := Player;
-end;
 
-procedure WindowOpen(Container: TUIContainer);
-begin
   SceneManager.LoadLevel('tower');
   {$ifdef TOUCH_INTERFACE}
   Window.AutomaticTouchInterface := true;
@@ -89,7 +86,6 @@ initialization
 
   { create Window and initialize Window callbacks }
   Window := TCastleWindowTouch.Create(Application);
-  Window.OnOpen := @WindowOpen;
   Window.OnPress := @WindowPress;
   Application.MainWindow := Window;
 end.

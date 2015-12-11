@@ -24,7 +24,7 @@ begin
   Window.FullScreen := true;
   Window.ParseParameters;
 
-  Config.Load;
+  UserConfig.Load;
   Window.OpenAndRun;
-  Config.Save;
+  UserConfig.Save;
 end.

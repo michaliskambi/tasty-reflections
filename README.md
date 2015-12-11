@@ -8,7 +8,7 @@ for details).
 
 You will need Castle Game Engine and FPC (Free Pascal Compiler)
 to compile. Install Castle Game Engine build tool
-(https://sourceforge.net/p/castle-engine/wiki/Build%20tool/ )
+(https://github.com/castle-engine/castle-engine/wiki/Build-Tool )
 and compile by simple "castle-engine compile" from command-line.
 
 You will need Blender http://www.blender.org/ to edit 3D data.
